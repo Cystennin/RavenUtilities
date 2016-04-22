@@ -1,11 +1,18 @@
 package com.raven.utilities.fluent.geoquery;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 /**
  * Copyright 2016 - Kenneth Allen Stoner - All rights reserved
  * for licensing information you can contact ken.stoner.sdet at gmail.
  */
 public class Location
 {
+    public Location createFromNOAAFormattedJson(String noaaFormattedJson)
+    {
+        return null;
+    }
+
     private double longitude;
     private double latitude;
     private String postalCode;
@@ -14,6 +21,11 @@ public class Location
     {
         this.longitude = longitude;
         this.latitude = latitude;
+        this.postalCode = postalCode;
+    }
+
+    private Location(final String postalCode, final String noaaFormattedJson)
+    {
         this.postalCode = postalCode;
     }
 
